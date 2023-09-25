@@ -1,6 +1,7 @@
 #include "../includes/embed.h"
 
-void    exit_prgm(t_sdl *sdl) {
+void    exit_prgm(t_sdl *sdl, string error_msg) {
+    cout << error_msg << endl;
     //destructor usage
     //destroy surface
     SDL_DestroyWindow(sdl->window);

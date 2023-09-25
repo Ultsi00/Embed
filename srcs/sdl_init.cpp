@@ -1,24 +1,20 @@
 #include "../includes/embed.h"
 
+//Comment out all function, make this with Renderer instead of CPU
 void    sdl_init(t_sdl *sdl) {
     sdl->window = NULL;
     sdl->surface = NULL;
-    if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
-        cout << "sdl_init(): SDL_INIT fail" << endl;
-        exit_prgm(sdl);
-    }
+    sdl->renderer = NULL;
+    if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
+        exit_prgm(sdl, "sdl_init(): SDL_INIT fail.");
     else {
         sdl->window = SDL_CreateWindow("embed", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
             SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
-        if (sdl->window == NULL) {
-            cout << "sdl_init(): SDL_CreateWindow() fail." << endl;
-            exit_prgm(sdl);
-        }
+        if (sdl->window == NULL)
+            exit_prgm(sdl, "sdl_init(): SDL_CreateWindow() fail.");
         sdl->surface = SDL_GetWindowSurface(sdl->window);
-        if (sdl->surface == NULL) {
-            cout << "sdl_init(): SDL_GetWindowSurface() fail." << endl;
-            exit_prgm(sdl);
-        }
+        if (sdl->surface == NULL)
+            exit_prgm(sdl, "sdl_init(): SDL_GetWindowSurface() fail.");
         SDL_FillRect(sdl->surface, NULL, 
             SDL_MapRGB(sdl->surface->format, 0x88, 0x88, 0x11));
         SDL_UpdateWindowSurface(sdl->window);
