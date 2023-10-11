@@ -1,8 +1,5 @@
 #include "../includes/embed.h"
 
-//!!! This is not used anymore. Save for C-version of SDL2 PNG load
-
-
 /*
     x,y: coordinates at which clipping starts in the spritesheet.
     w,h: area of the clipped part in the spritesheet.
@@ -36,10 +33,15 @@ static SDL_Texture *load_texture(t_sdl *sdl) {
     return new_texture; //think if this needs to be destroyed, now it contains a spritesheet
 }
 
-void load_media(t_sdl *sdl) {
-    sdl->s_controller = load_texture(sdl);
-    
-    if (!sdl->s_controller)
+void load_media_class(vector<DevicePart> &v_texture, t_sdl *sdl) {
+    SDL_Texture *clip_temp = NULL;
+    clip_temp = load_texture(sdl);
+    if (!clip_temp)
         exit_prgm(sdl, "load_media(): load_texture() fail.");
+    
+    v_textures[0].setTexture(clip_temp);
+    //free clip_temp
+    
+    
     sprite_clip_main(sdl);
 }

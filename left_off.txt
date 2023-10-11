@@ -1,0 +1,6 @@
+public data memberiksi txt:n x/y
+vectorin indeksien jarjestys: frame -> button/knob/etc, frame -> button/knob/etc
+spritejen positioiden koordinaatit -> luokan sisalle
+
+enumerate vector iterators: ctrl_frame = 0, ctrl_knob = 1, ...
+create functions to program_loop: input, rendering, ..., etc

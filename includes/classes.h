@@ -2,15 +2,24 @@
 # define CLASSES_H
 # include "embed.h"
 
-class Parameter
+struct t_sdl;   //forward declaration
+
+class DevicePart
 {
     private:
-        int p_value;
+        int mW;
+        int mH;
+        SDL_Texture *mTxt;
+        SDL_Rect mClip[1];
     public:
-        Parameter(int value);
-        int     getParamValue() {return (p_value); }
-        void    setParamValue(int value);
-
+        DevicePart(int txt_w, int txt_h);
+        int getTxtWidth() { return(mW); }
+        int getTxtHeight() { return(mH); }
+        void setTxtWidth(int txt_w);
+        void setTxtHeight(int txt_h);
+        void loadMedia(t_sdl *sdl, const char* txt_path);
+        SDL_Texture* getTxt() { return mTxt; }
+        SDL_Rect* getClip() { return mClip; }
 };
 
 #endif
