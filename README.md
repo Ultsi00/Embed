@@ -1,5 +1,6 @@
 # embed
-Created on Linux Mint 21.2 Cinnamon using SDL2.  
+Created on Linux Mint 21.2 Cinnamon.
+SDL2 framework for graphics, Piskel for creating sprites.  
 Purpose was to practise cpp and SDL2.  
 
 Embedded system visual simulator. User turns the device on with RETURN, and  
