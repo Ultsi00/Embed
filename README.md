@@ -1,4 +1,6 @@
 # embed
+Created on Linux Mint 21.2 Cinnamon using SDL2.  
+
 Embedded system visual simulator. User turns the device on with RETURN, and  
 increases/decreases the input energy with ARR_UP/ARR_DOWN.  
 Device visualizes the change of energy with a moving slider,  
