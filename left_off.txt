@@ -1,8 +1,0 @@
-comments in functions
-
-framerate cap to 60
-
-txt_pos_modifier: look nbs_pos comment (not into macro)
-txt w/h scaling with screen resolution
-some scalings might be off (texture w/h are not linked to scaling)
-numbers, slider are aligning wrong, somewhere is missing scaling
