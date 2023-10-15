@@ -10,6 +10,7 @@ Device enters error state when variable reaches value >= 1000.
   
   
 ## Undone part:  
+-Controller knob sprite rotation  
 -Resolution options. Base window size is 1280 x 720  
 -Texture size scaling with the altered resolution  
 -Framerate limit to 60  
