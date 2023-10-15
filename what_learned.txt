@@ -1,0 +1,8 @@
+Do scaling parameters/function in the very start
+forward declaration
+vector usage
+vector container
+class syntax (erilaisia tapoja)
+function to oop, having loadmedia() as member function
+
+//read through all files in the end to memorize what was bad and what was then turned better
