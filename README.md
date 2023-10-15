@@ -1,4 +1,4 @@
-**#embed**  
+#embed  
 Embedded system visual simulator. User turns the device on with RETURN, and  
 increases/decreases the input energy with ARR_UP/ARR_DOWN.  
 Device visualizes the change of energy with a moving slider,  
@@ -7,7 +7,7 @@ Variable is the cube of energy.
 Device enters error state when variable reaches value >= 1000.  
   
   
-Undone part:  
+##Undone part:  
 -Resolution options. Base window size is 1280 x 720  
 -Texture size scaling with the altered resolution  
 -Framerate limit to 60  
