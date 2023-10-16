@@ -1,7 +1,8 @@
 #include "../includes/embed.h"
 
 /*
-	Loads spritesheets.
+	Loads all the spritesheets, for each texture object,
+	by calling loadMedia() member function.
 	Clips each sprite in the spritesheets to vector containers.
 	Controller and Device sprites: txt_container,
 		Number and Error sprites: txt_nbs_container.

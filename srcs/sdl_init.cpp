@@ -10,6 +10,9 @@ static void init_renderer(t_sdl *sdl) {
         exit_prgm(sdl, "sdl_init(): IMG_Init() fail.");
 }
 
+/*
+    Initiate SDL connection.
+*/
 void    sdl_init(t_sdl *sdl) {
     sdl->window = NULL;
     sdl->renderer = NULL;

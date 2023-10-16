@@ -20,10 +20,12 @@ static void render_static(t_sdl *sdl, vector<DevicePart>& txt_container) {
 }
 
 /*
-
+    Rendering function. Divided into sprites, which are not affected by user input,
+    and into sprites, which are.
 */
 void render(t_sdl *sdl, vector<DevicePart> &txt_container,
-            vector<DevicePart> &txt_nbs_container, Param &param) {
+        vector<DevicePart> &txt_nbs_container, Param &param) {
+
     render_static(sdl, txt_container);
     render_dynamic(sdl, txt_container, txt_nbs_container, param);
 }

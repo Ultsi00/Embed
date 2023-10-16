@@ -1,6 +1,8 @@
 #include "../includes/embed.h"
 
-// w/h: from outside (use txt_dimensions.h macroes)
+/*
+    Default sprite width and height. Adding texture objects into vector container.
+*/
 void txts_init(vector<DevicePart>& txt_container, vector<DevicePart>& txt_nbs_container) {
 
     DevicePart controller_frame = DevicePart(CTRL_FRAME_W, CTRL_FRAME_H);

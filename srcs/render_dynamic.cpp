@@ -1,21 +1,20 @@
 #include "../includes/embed.h"
 
-void number_parser(int counter, int *nbs) {
+static void number_parser(int counter, int *nbs) {
     nbs[2] = counter * 0.01;
     nbs[0] = counter % 10;
     while (counter > 99) {
         counter = counter - 100;
     }
     nbs[1] = counter * 0.1;
-    printf("nbs[2->0]: %d %d %d\n", nbs[2], nbs[1], nbs[0]);
 }
-//mistake, energy has 1, 2, ..., 3, if trying to use as container indexes
-void render_numbers(t_sdl *sdl, vector<DevicePart> &txt_nbs_container, Param& param) {
+
+static void render_numbers(t_sdl *sdl, vector<DevicePart> &txt_nbs_container, Param& param) {
     SDL_Rect quad;
     int nbs[3];
 
+    //render Err
     if (param.counter >= 1000) {
-        //render Err
         quad = {txt_nbs_container[11].txt_x, txt_nbs_container[11].txt_y,
             txt_nbs_container[11].getTxtWidth(), txt_nbs_container[11].getTxtHeight()};
         SDL_RenderCopy(sdl->renderer, txt_nbs_container[11].getTxt(), txt_nbs_container[11].getClip(), &quad);
@@ -26,6 +25,7 @@ void render_numbers(t_sdl *sdl, vector<DevicePart> &txt_nbs_container, Param& pa
             txt_nbs_container[10].getTxtWidth(), txt_nbs_container[10].getTxtHeight()};
         SDL_RenderCopy(sdl->renderer, txt_nbs_container[10].getTxt(), txt_nbs_container[10].getClip(), &quad);
     }
+    //render numbers
     else {
         number_parser(param.counter, nbs);
         //right-hand side number: 0 0 X
