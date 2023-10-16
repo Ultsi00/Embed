@@ -37,6 +37,7 @@ void DevicePart::loadMedia(t_sdl *sdl, const char* txt_path, int clip_x, int cli
     if (!new_texture)
         exit_prgm(sdl, "load_texture(): SDL_CreateTextureFromSurface() fail.");
     SDL_FreeSurface(loaded_surface);
+    loaded_surface = NULL;
     mTxt = new_texture;
     if (!mTxt)
         exit_prgm(sdl, "load_media(): load_texture() fail.");
