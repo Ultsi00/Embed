@@ -17,8 +17,6 @@ struct t_sdl {
     SDL_Event   event;
     SDL_Renderer *renderer;
     bool        quit;
-    SDL_Texture *s_controller;      //remove. see load_media()
-    SDL_Rect    sc_controller[2]; //remove. see load_media()
 };
 
 void    sdl_init(t_sdl *sdl);
@@ -35,6 +33,5 @@ void    render(t_sdl *sdl, vector<DevicePart> &txt_container,
             vector<DevicePart> &txt_nbs_container, Param &param);
 void    render_dynamic(t_sdl *sdl, vector<DevicePart>& txt_container,
             vector<DevicePart> &txt_nbs_container, Param& param);
-
 
 #endif

@@ -1,9 +1,8 @@
-//tahan tiedoston kuvaus. Mieti nimenmuutosta: txt_dim_and_ssheet_info.h
 #ifndef TXT_DIMENSIONS_H
 #define TXT_DIMENSIONS_H
 #include "embed.h"
 
-//put here same scaling as in txt_pos_modifiers.h
+//width and height for textures
 #define CTRL_FRAME_W 184
 #define CTRL_FRAME_H 352
 #define CTRL_KNOB_W 56
