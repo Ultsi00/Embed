@@ -10,6 +10,11 @@ whereas a variable value with running number.
 Variable is the cube of energy.  
 Device enters error state when variable reaches value >= 1000.  
   
+
+
+https://github.com/Ultsi00/embed/assets/60548494/206c447e-9dbd-46b6-b7a9-aa654d6f81bb
+
+
   
 ## Undone part:  
 -Controller knob sprite rotation  
